@@ -17,8 +17,6 @@ public class Action {
 	@Column(length = 100, nullable = false)
 	private String libelle;
 	@OneToMany(mappedBy = "action")
-	private List<Historiqueclient> historiqueclient;
-	@OneToMany(mappedBy = "action")
 	private List<Historiquefacture> historiquefacture;
 	
 	public int getId() {

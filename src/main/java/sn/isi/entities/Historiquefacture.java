@@ -23,8 +23,6 @@ public class Historiquefacture {
 	@ManyToOne()
 	private Facture facture;
 	@ManyToOne()
-	private User user;
-	@ManyToOne()
 	private Action action;
 	
 	public int getId() {

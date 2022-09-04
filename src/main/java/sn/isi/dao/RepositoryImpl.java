@@ -27,7 +27,6 @@ public class RepositoryImpl <T> implements Repository<T>{
 	@Override
 	public int delete(int id,T t) {
 		int result=1;
-		
 		transaction = session.beginTransaction();
 		session.delete(session.get(t.getClass(), id));
 		transaction.commit();

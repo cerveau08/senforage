@@ -1,6 +1,5 @@
 package sn.isi.entities;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Column;
@@ -30,10 +29,6 @@ public class User {
 	private String etat;
 	@ManyToOne()
 	private Role role;
-	@OneToMany(mappedBy = "user")
-	private List<Historiqueclient> historiqueclient;
-	@OneToMany(mappedBy = "user")
-	private List<Historiquefacture> historiquefacture;
 	
 	
 	public int getId() {

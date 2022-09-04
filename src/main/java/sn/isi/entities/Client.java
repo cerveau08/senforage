@@ -20,16 +20,14 @@ public class Client {
 	private String nom;
 	@Column(length = 100, nullable = false)
 	private String prenom;
-	@Column(length = 100, nullable = false)
+	@Column(length = 500, nullable = false)
 	private String adresse;
-	@Column(length = 100, nullable = false)
-	private String telephone;
+	@Column(length = 20, nullable = false)
+	private int telephone;
 	@OneToOne(mappedBy = "chef")
 	private Village villagechef;
 	@ManyToOne()
 	private Village village;
-	@OneToMany(mappedBy = "client")
-	private List<Historiqueclient> historiqueclient;
 	@OneToMany(mappedBy = "client")
 	private List<Abonnement> abonnement;
 	
@@ -57,10 +55,10 @@ public class Client {
 	public void setAdresse(String adresse) {
 		this.adresse = adresse;
 	}
-	public String getTelephone() {
+	public int getTelephone() {
 		return telephone;
 	}
-	public void setTelephone(String telephone) {
+	public void setTelephone(int telephone) {
 		this.telephone = telephone;
 	}
 	public Village getVillagechef() {
